@@ -13,9 +13,7 @@ namespace Musikkbibliotek
         private int ReleaseYear { get; set; }
         private string BandName { get; set; }
         private List<Song> Songs { get; set; }
-
         public Album() { }
-
         public Album(string name, int releaseyear, string bandname, List<Song> songs)
         {
             Name = name;
@@ -23,13 +21,10 @@ namespace Musikkbibliotek
             BandName = bandname;
             Songs = songs;
         }
-
-
         public string GetAlbumName()
         {
             return Name;
         }
-
         public int GetReleaseYear() 
         {
             return ReleaseYear; 
@@ -38,7 +33,6 @@ namespace Musikkbibliotek
         {
             return BandName; 
         }
-
         public void SetNameOfNewAlbum()
         {
             Console.WriteLine("Please enter the name of the album you wish to add.");
@@ -50,7 +44,10 @@ namespace Musikkbibliotek
             ReleaseYear = int.Parse(Console.ReadLine());
             
         }
-
+        public virtual string GetFormat()
+        {
+            return "Unknown Format";
+        }
         public void SetBandNameOfNewAlbum()
         {
             Console.WriteLine("Please enter the name of the band.");

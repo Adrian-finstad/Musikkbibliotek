@@ -12,5 +12,7 @@ namespace Musikkbibliotek
 
         public void PlayAlbum();
 
+        
+
     }
 }

@@ -12,11 +12,21 @@ namespace Musikkbibliotek
 
         private string _format = "Casette";
 
-        public Casette(string format)
+        public Casette(string format, string name, int releaseyear, string bandname, List<Song> songs) : base(name, releaseyear, bandname, songs)
         {
             _format = format;
         }
 
+        public Casette()
+        {
+
+        }
+
+        public override string GetFormat()
+        {
+            return _format;
+        }
+        
         public void PlayAlbum()
         {
 
